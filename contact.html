@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo"><a href="#">Podcast</a></div>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="merch.html">Merch</a></li>
+        <li><a href="patron.html">Patron</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="community.html">Community Board</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <!-- Contact Section -->
+    <h2 class="contact-title animated fadeIn">Contact Us</h2>
+
+    <!-- Google Map -->
+    <div class="google-map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1dYOUR_LATITUDE!2dYOUR_LONGITUDE!3d15.0000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDAwJzUwLjAiUyA0NcKwNTAnNTAuMCJF!5e0!3m2!1sen!2sus!4vYOUR_MAP_ID"
+        width="600"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </div>
+    <!-- Address -->
+    <div class="address">
+        <h3>Our Address:</h3>
+        <p>123 Main Street<br>City, State ZIP Code<br>Country</p>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+          <div class="name-fields">
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname" required>
+          
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname" required>
+          </div>
+  
+          <div class="subject-field">
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+  
+          <div class="email-field">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+  
+          <input
+            type="submit"
+            value="Send Email"
+          >
+        </form>
+      </div>
+    </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 Jack Pack Podcast. All rights reserved.</p>
+  </footer>
+</body>
+</html>

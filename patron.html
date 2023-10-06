@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jack Pack Podcast Patron Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo"><a href="#">JACK PACK</a></div>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="merch.html">Merch</a></li>
+        <li><a href="patron.html">Patron</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="community.html">Community Board</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <h2 class="patron-title animated fadeIn">Become a Patron</h2>
+    <div class="patron-description animated fadeIn">
+      <p>Your support as a Patron helps us continue creating high-quality content. By becoming a Patron, you get exclusive access to behind-the-scenes content, early access to episodes, and the satisfaction of knowing you're directly contributing to the success of our podcast.</p>
+    </div>
+    <div class="patron-form animated zoomIn">
+      <form id="patronForm">
+        <div class="name-fields">
+          <div class="name-field">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Your first name" required>
+          </div>
+          <div class="name-field">
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Your last name" required>
+          </div>
+        </div>
+        
+        <div class="email-field">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Your email address" required>
+        </div>
+        
+        <button type="submit">Support</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 Jack Pack Podcast. All rights reserved.</p>
+  </footer>
+
+  <!-- Adding inline JavaScript for the form submission  -->
+  <script>
+    document.getElementById('patronForm').addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent form submission 
+      alert('Thank you for your support!'); // Show a thank you message
+    });
+  </script>
+</body>
+</html>

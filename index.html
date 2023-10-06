@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jack Pack Podcast</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo"><a href="#">JACK PACK</a></div> <!--Maybe I can get someone to make a cool logo but thats going to take time and cost monies-->
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="merch.html">Merch</a></li>
+        <li><a href="patron.html">Patron</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="community.html">Community Board</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <!-- Title -->
+    <h1 class="main-title animated fadeIn">Welcome to the Jack Pack</h1>
+
+    <!-- TEMP Profile Picture until I take something thats better -->
+    <img src="profile_picture.jpg" alt="Profile" class="profile-picture animated zoomIn">
+
+    <!-- We are funny please watch us section -->
+    <div class="features-section animated fadeIn">
+      <h2 class="features-title">Why Tune Into Jack Pack?</h2>
+
+      <div class="feature">
+        <h3>Roller-coaster of Emotions</h3>
+        <p>Dive into a whirlwind of humor, insight, and storytelling as we explore the quirkiest corners of pop culture. It's a treat for the soul!</p>
+      </div>
+
+      <div class="feature">
+        <h3>Funny Topics</h3>
+        <p>From movies to music, books to binges, and yes, even those occasional deep dives into the gaming world — we've got it all covered.</p>
+      </div>
+
+      <div class="feature">
+        <h3>Guests from All Walks</h3>
+        <p>Whether they're renowned authors, indie musicians, or gaming pros, our guests bring fresh perspectives that enrich our podcast palette.</p>
+      </div>
+
+      <div class="feature">
+        <h3>Engaging and Interactive</h3>
+        <p>We're not just here to talk. We're here to connect. Engage in live sessions, share your thoughts, and be part of our vibrant community.</p>
+      </div>
+
+      <div class="feature">
+        <h3>Special Giveaways</h3>
+        <p>Our loyal listeners are in for a treat! With monthly giveaways ranging from cool merch to surprise collectibles, there's always a reason to keep coming back.</p>
+      </div>
+    </div>
+
+    <!-- Temp Video Section I need to upload my own videos and stuff -->
+    <h2 class="spotify-preview animated bounceInRight">Check out our Youtube Videos!</h2>
+    <div class="video-section animated bounceInRight">
+      <div class="carousel">
+        <div id="prevBtn" class="carousel-button arrow arrow-left"></div>
+        <div id="videoContainer" class="video-container">
+            
+          <iframe width="420" height="315" src="https://www.youtube.com/embed/example1"></iframe>
+          <iframe width="420" height="315" src="https://www.youtube.com/embed/example2"></iframe>
+          <iframe width="420" height="315" src="https://www.youtube.com/embed/example3"></iframe>
+        </div>
+        <div id="nextBtn" class="carousel-button arrow arrow-right"></div>
+      </div>
+    </div>
+
+    <!-- Temp Spotify Playlist until I create the podcast playlist -->
+    <h2 class="spotify-preview animated bounceInLeft">Listen to our latest track on Spotify</h2>
+    <div class="spotify-preview animated bounceInLeft">
+      <iframe src="https://open.spotify.com/embed/playlist/62maOHS1n1zCFPiDtJD33A" width="1634" height="500"></iframe>
+    </div>
+
+
+    <!-- Adding inline JavaScript for the carousel -->
+    <script>
+        const videoIds = ['3ElNrlFHmwY', '3sMNiWdxaqg', 'IW2oap-Ugh8', '95qovektvh4', 'gNFyxiZZB_0', 'qCXxVax1Q6Q'];
+        
+        let currentIndex = 0;
+
+        function updateVideos() {
+        const videoContainer = document.getElementById('videoContainer');
+        videoContainer.innerHTML = ''; 
+
+        // Load new set of videos based on currentIndex
+        for (let i = 0; i < 3; i++) {
+            const frame = document.createElement('iframe');
+            frame.width = '560';
+            frame.height = '315';
+            frame.src = `https://www.youtube.com/embed/${videoIds[(currentIndex + i) % 6]}`;
+            videoContainer.appendChild(frame);
+        }
+        }
+
+        // Initial load
+        updateVideos();
+
+        // Event listeners for buttons
+        document.getElementById('prevBtn').addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + 6) % 6;
+        updateVideos();
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', () => { //No idea why this button is so messed up not enough time to fix this weird ass error
+        currentIndex = (currentIndex + 1) % 6;
+        updateVideos();
+        });
+    </script>
+  <script src="script.js"></script>
+
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2023 Jack Pack Podcast. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

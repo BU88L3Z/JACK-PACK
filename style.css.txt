@@ -1,0 +1,221 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom, #E1B4FF, #A78CDA);
+    margin: 0;
+    padding: 0;
+}
+
+.main-title {
+    text-shadow: 0 0 10px #E1B4FF, 0 0 20px #E1B4FF, 0 0 30px #E1B4FF, 0 0 40px #E1B4FF;
+    text-align: center;
+}
+  /* ADDING ANIMATION FROM https://www.w3schools.com/css/css3_animations.asp */
+  .animated {
+    animation-duration: 1s;
+  }
+  
+  .fadeIn {
+    background-color: transparent;
+    animation-name: fadeIn;
+    animation-timing-function: ease-out;
+  }
+  
+  .zoomIn {
+    background-color: transparent;
+    animation-name: zoomIn;
+    animation-timing-function: ease-out;
+  }
+  
+  .bounceInRight {
+    background-color: transparent;
+    animation-name: bounceInRight;
+    animation-timing-function: ease-out;
+  }
+  
+  .bounceInLeft {
+    background-color: transparent;
+    animation-name: bounceInLeft;
+    animation-timing-function: ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes zoomIn {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes bounceInRight {
+    from {
+      transform: translateX(1000px);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes bounceInLeft {
+    from {
+      transform: translateX(-1000px);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+/* Navbar Styles */
+.navbar {
+    background-color: #807C82;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.nav-logo a {
+    color: #E1B4FF;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-list a:hover {
+    background-color: #E1B4FF;
+    color: #807C82;
+}
+
+.main {
+    text-align: center;
+    background-color: transparent;
+    color: #807C82;
+    padding: 20px;
+}
+
+/* MORE ANIMATION MOREEEEEEE */
+.video-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent; 
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+}
+
+.carousel-button {
+    cursor: pointer;
+    flex-shrink: 0; 
+}
+
+.arrow-left, .arrow-right {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 30px 20px 30px; 
+}
+
+.arrow-left {
+    border-color: transparent #E1B4FF transparent transparent;
+    margin-right: 10px;
+}
+
+.arrow-right {
+    border-color: transparent transparent transparent #E1B4FF;
+    margin-left: 10px; 
+}
+
+.arrow-left:hover, .arrow-right:hover {
+    animation: rainbow 1s infinite linear;
+}
+/* MOREEEEEEEEEEEEEE RAINBOWS MOREEEEEEEEEEEEEEEEEEEEEEEEEEEEE */
+@keyframes rainbow {
+    0% { border-color: transparent red transparent transparent; }
+    14% { border-color: transparent orange transparent transparent; }
+    28% { border-color: transparent yellow transparent transparent; }
+    42% { border-color: transparent lime transparent transparent; }
+    57% { border-color: transparent blue transparent transparent; }
+    71% { border-color: transparent indigo transparent transparent; }
+    85% { border-color: transparent violet transparent transparent; }
+    100% { border-color: transparent red transparent transparent; }
+}
+
+
+
+/* Patron page needs more animation */
+.patron-title {
+    margin-top: 20px;
+}
+
+.patron-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background-color: #E1B4FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #A78CDA;
+}
